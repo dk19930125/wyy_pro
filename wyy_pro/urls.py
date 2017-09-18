@@ -19,9 +19,11 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 from commodity_management import urls  as commodity_management_urls
+from user import urls as user_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', TemplateView.as_view(template_name="index.html")),
     url(r'^', include(commodity_management_urls.urlpatterns, namespace='commodity_management')),
+    url(r'^', include(user_urls.urlpatterns, namespace='user')),
 ]

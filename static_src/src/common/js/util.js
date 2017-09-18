@@ -6,6 +6,7 @@ function padding(s, len) {
     return s;
 };
 
+
 export default {
     getQueryStringByName: function (name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");

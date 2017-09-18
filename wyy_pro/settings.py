@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'base',
+    'user',
     'commodity_management',
 ]
 
@@ -66,6 +67,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # 'DIRS': [],
         'DIRS': ['static_src/dist'],
+        # 'DIRS': ['static_src'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -145,5 +147,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static_src/dist/static"),
 ]
 
-
+try:
+    from .local_settings import *
+except:
+    pass
 

@@ -1,0 +1,12 @@
+*.sqlite*
+
+.idea
+
+__pycache__/
+
+
+.DS_Store
+node_modules/
+npm-debug.log
+.editorconfig
+dist/
